@@ -266,7 +266,7 @@ pre {
 @media screen and (max-width: 480px) {
 
     .body, html {
-        font-size: 12px;
+        font-size: 14px;
         margin: 16px;
     }
 
@@ -293,10 +293,26 @@ pre {
     }
 
     .leave {
-        margin-top: 30px;
+        width: 75%;
+        height: 45px;
+        max-height: 45px;
+        border-radius: 22px;
+        margin-top: 60px;
     }
 
     .submit {
+        width: 75%;
+        height: 45px;
+        max-height: 45px;
+        border-radius: 22px;
+        margin-top: 30px;
+    }
+
+    .reset {
+        width: 75%;
+        height: 45px;
+        max-height: 45px;
+        border-radius: 22px;
         margin-top: 30px;
     }
 
@@ -309,7 +325,7 @@ pre {
     }
 
     .star_t {
-        font-size: 6px;
+        font-size: 10px;
     }
 
 }
