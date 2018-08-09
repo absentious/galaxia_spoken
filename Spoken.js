@@ -8,6 +8,10 @@ sy.classList.toggle('show');
 var star = document.getElementById('starAnimate');
 star.classList.toggle('show');
 
+var focusText = function() {
+    document.getElementById("nameInput").focus();
+}
+
 var quoteFade = function() {
     var quote = document.getElementById('quote');
     quote.classList.toggle('fade');
@@ -52,6 +56,7 @@ document.getElementById('leave').onclick = function () {
     setTimeout(killQuote, 1500);
     setTimeout(spawnForm, 1500);
     setTimeout(fadeForm, 1550);
+    setTimeout(focusText, 1600);
 }
 
 var fadeFormContent = function() {
