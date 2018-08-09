@@ -252,3 +252,64 @@ input {
 input:focus, textarea:focus {
     outline: none;
 }
+
+pre {
+    display:inline-block;
+    text-align:center;
+    letter-spacing:5px;
+    line-height:10px;
+    font-size:10px;
+    font-weight:bold;
+    background:#000000;
+}
+
+@media screen and (max-width: 480px) {
+
+    .body, html {
+        font-size: 12px;
+        margin: 16px;
+    }
+
+    pre {
+        letter-spacing:3px;
+        line-height:6px;
+        font-size:6px;
+        text-align: center;
+    }
+
+    .galaxia {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .quote {
+        margin-top: 45px;
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .leave {
+        margin-top: 30px;
+    }
+
+    .submit {
+        margin-top: 30px;
+    }
+
+    #staranimate {
+        padding-top: 448px;
+    }
+
+    #staranimate.rise {
+        padding-top: 210px;
+    }
+
+    .star_t {
+        font-size: 6px;
+    }
+
+}
