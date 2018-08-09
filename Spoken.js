@@ -8,6 +8,7 @@ sy.classList.toggle('show');
 var star = document.getElementById('starAnimate');
 star.classList.toggle('show');
 
+
 var focusText = function() {
     document.getElementById("nameInput").focus();
 }
@@ -19,7 +20,8 @@ var quoteFade = function() {
     leave.classList.toggle('fade');
 }
 window.onload = function() {
-    setTimeout(quoteFade, 500);
+    setTimeout(quoteFade, 1500);
+    setTimeout(galaxiaFade, 200);
 }
 
 var fadeQuote = function() {
