@@ -1,0 +1,238 @@
+.body, html {
+    background-color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    color: #f6f6f6;
+    font-size: 14px;
+}
+
+.layers {
+    position: relative;
+}
+
+.allcontent {
+    position: absolute;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.galaxia {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#galaxia {
+    opacity: 1;
+    transition: opacity 3s; 
+}
+  
+#galaxia.fade {
+    opacity: 0;
+}
+
+.quote {
+    width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+.author_t {
+    width: 100%;
+    text-align: right;
+}
+
+#quote {
+    opacity: 0;
+    transition: opacity 1.5s; 
+}
+
+#quote.fade {
+    opacity: 1;
+}
+
+#quote.disp {
+    display: none;
+}
+
+.leave {
+    width: 10rem;
+    height: 30px;
+    max-height: 30px;
+    margin-top: 60px;
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leave_t {
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    font-weight: bold;
+}
+
+#leave {
+    opacity: 0;
+    transition: opacity 1.5s; 
+}
+  
+#leave.fade {
+    opacity: 1;
+}
+
+#leave.disp {
+    display: none;
+}
+
+.form {
+    position: relative;
+    width: 30rem;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+#form {
+    opacity: 0;
+    transition: opacity 1.5s; 
+}
+
+#form.fade {
+    opacity: 1;
+}
+
+#form.show {
+    display: none;
+}
+
+.formContent {
+    width: 100%;
+    position: absolute;
+    background-color: #000;
+}
+
+#formContent {
+    opacity: 1;
+    transition: opacity 1.5s; 
+}
+
+#formContent.fade {
+    opacity: 0;
+}
+
+.formStar {
+    width: 100%;
+    position: absolute;
+    align-content: center;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    background-color: #000;
+    border-bottom: 2px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #f6f6f6;
+    color: #f6f6f6;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.submit {
+    width: 10rem;
+    height: 30px;
+    max-height: 30px;
+    margin-top: 60px;
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.zero_t {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
+
+.star_t {
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+}
+
+.starAnimate {
+    position: absolute;
+    width: 100%;
+}
+
+#starAnimate {
+    padding-top: 680px;
+    opacity: 0;
+    transition: padding-top 2s, 
+        opacity 1.5s; 
+}
+
+#starAnimate.rise {
+    padding-top: 308px;
+}
+
+#starAnimate.show {
+    display: none;
+}
+
+#starAnimate.fade {
+    opacity: 1;
+}
+
+.seeyou {
+    padding-top: 60px;
+}
+
+#seeyou {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+#seeyou.fade {
+    opacity: 1;
+}
+
+#seeyou.show {
+    display: none;
+}
+
+.seeyou_t {
+    width: 100%;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.reset {
+    width: 10rem;
+    height: 30px;
+    max-height: 30px;
+    margin-top: 60px;
+    border-radius: 15px;
+    border: 2px solid;
+    border-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
