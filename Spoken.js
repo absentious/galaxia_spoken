@@ -1,123 +1,84 @@
-
-var form = document.getElementById('form');
-form.classList.toggle('show');
-
-var sy = document.getElementById('seeyou');
-sy.classList.toggle('show');
-
-var star = document.getElementById('starAnimate');
-star.classList.toggle('show');
-
+var exec = function(elementId, action, time=0) {
+    setTimeout(() => {
+        var element = document.getElementById(elementId);
+        element.classList.toggle(action);
+    }, time);
+}
 
 var focusText = function() {
     document.getElementById("nameInput").focus();
 }
 
-var quoteFade = function() {
-    var quote = document.getElementById('quote');
-    quote.classList.toggle('fade');
-    var leave = document.getElementById('leave');
-    leave.classList.toggle('fade');
-}
+exec('form', 'show');
+exec('seeyou', 'show');
+exec('starAnimate', 'show');
+
 window.onload = function() {
-    setTimeout(quoteFade, 1500);
-    setTimeout(galaxiaFade, 200);
+    //quoteFade
+    exec('quote', 'fade', 1500);
+    exec('leave', 'fade', 1500);
+    //galaxiaFade
+    exec('galaxia', 'fade', 200);
 }
 
-var fadeQuote = function() {
-    var quote = document.getElementById('quote');
-    quote.classList.toggle('fade');
-    var leave = document.getElementById('leave');
-    leave.classList.toggle('fade');
-}
-
-var killQuote = function() {
-    var quote = document.getElementById('quote');
-    quote.classList.toggle('disp');
-    var leave = document.getElementById('leave');
-    leave.classList.toggle('disp');
-}
-
-var leaveFade = function() {
-    var leave = document.getElementById('leave');
-    leave.classList.toggle('fade');
-}
-
-var spawnForm = function() {
-    var form = document.getElementById('form');
-    form.classList.toggle('show');
-}
-
-var fadeForm = function() {
-    var form = document.getElementById('form');
-    form.classList.toggle('fade');
-}
-
+//leave a name transition
 document.getElementById('leave').onclick = function () {
-    fadeQuote();
-    setTimeout(killQuote, 1500);
-    setTimeout(spawnForm, 1500);
-    setTimeout(fadeForm, 1550);
+    //quoteFade
+    exec('quote', 'fade');
+    exec('leave', 'fade');
+    //killQuote
+    exec('quote', 'disp', 1500);
+    exec('leave', 'disp', 1500);
+    //spawnForm
+    exec('form', 'show', 1500);
+    //formFade
+    exec('form', 'fade', 1550);
     setTimeout(focusText, 1600);
 }
 
-var fadeFormContent = function() {
-    var formC = document.getElementById('formContent');
-    formC.classList.toggle('fade');
-}
-
-var starFade = function() {
-    var star = document.getElementById('starAnimate');
-    star.classList.toggle('fade');
-}
-
-var starRise = function() {
-    var star = document.getElementById('starAnimate');
-    star.classList.toggle('rise');
-}
-
-var galaxiaFade = function() {
-    var galaxia = document.getElementById('galaxia');
-    galaxia.classList.toggle('fade');
-}
-
-var seeyouFade = function() {
-    var see = document.getElementById('seeyou');
-    see.classList.toggle('fade');
-}
-
-var seeyouShow = function() {
-    var see = document.getElementById('seeyou');
-    see.classList.toggle('show');
-}
-
-var starLayerShow = function() {
-    var star = document.getElementById('starAnimate');
-    star.classList.toggle('show');
-}
-
+//submit name transition
 var submitName = function() {
-    starLayerShow();
-    fadeFormContent();
-    starFade();
-    setTimeout(galaxiaFade, 1500);
-    setTimeout(starRise, 1550);
-    setTimeout(seeyouShow, 3000);
-    setTimeout(seeyouFade, 3050);
+    //starAnimate show
+    exec('starAnimate', 'show');
+    //fade formContent
+    exec('formContent', 'fade');
+    //star fade
+    exec('starAnimate', 'fade');
+    //galaxia fade
+    exec('galaxia', 'fade', 1500);
+    //star rise
+    exec('starAnimate', 'rise', 1550);
+    //seeyou show
+    exec('seeyou', 'show', 3000);
+    //seeyou fade
+    exec('seeyou', 'fade', 3050);
     return false;
 }
 
-
+//reset form transition
 document.getElementById('reset').onclick = function () {
-    starFade();
-    seeyouFade();
-    setTimeout(seeyouShow, 1500);
-    setTimeout(galaxiaFade, 1500);
-    setTimeout(killQuote, 3000);
-    setTimeout(fadeQuote, 3050);
-    setTimeout(spawnForm, 3100);
-    setTimeout(fadeForm, 3150);
-    setTimeout(fadeFormContent, 3200);
-    setTimeout(starRise, 4050);
-    setTimeout(starLayerShow, 4050);
+    //starfade
+    exec('starAnimate', 'fade');
+    //seeyou fade
+    exec('seeyou', 'fade');
+    //seeyou show
+    exec('seeyou', 'show', 1500);
+    //galaxia fade
+    exec('galaxia', 'fade', 1500);
+    //kill quote
+    exec('quote', 'disp', 3000);
+    exec('leave', 'disp', 3000);
+    //fade quote
+    exec('quote', 'fade', 3050);
+    exec('leave', 'fade', 3050);
+    //spawn form
+    exec('form', 'show', 3100);
+    //fade form
+    exec('form', 'fade', 3150);
+    //fade formContent
+    exec('formContent', 'fade', 3200);
+    //star rise
+    exec('starAnimate', 'rise', 4050);
+    //starLayer show
+    exec('starAnimate', 'show', 4050);
 }
