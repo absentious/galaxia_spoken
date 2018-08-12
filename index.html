@@ -35,11 +35,15 @@
                     </p>
                 </div>
                 <div class="formContent" id="formContent">
-                    <p class="quote_t">Name:</p>
-                    <input type="text" id="nameInput" />
-                    <div class="submit" id="submit">
-                        <p class="leave_t">Send ></p>
-                    </div>
+                    <form id="formName" onsubmit="return submitName()">
+                        <p class="quote_t">Name:</p>
+                        <input type="text" id="nameInput" required />
+                        <!--<div type="submit" class="submit" id="submit">-->
+                        <div class="subbut">
+                            <input type="submit" class="submit leave_t" id="submit" value="Submit >" />
+                        </div>
+                        
+                    </form>
                 </div>
             </div>
         </div>
@@ -57,6 +61,32 @@
         </div>
     </div>
     <script src="./Spoken.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDzat7rQrc5Lgs9CaUjlXVRU6VHE5GKdpQ",
+        authDomain: "galaxia-90874.firebaseapp.com",
+        databaseURL: "https://galaxia-90874.firebaseio.com",
+        projectId: "galaxia-90874",
+        storageBucket: "galaxia-90874.appspot.com",
+        messagingSenderId: "703900118466"
+    };
+    firebase.initializeApp(config);
+    const storageService = firebase.storage();
+    const storageRef = storageService.ref();
+    var b = firebase.database().ref("names");
+    $("#formName").submit(
+        function(config) { 
+            $(this), console.log("Submit to Firebase");
+            var nameI = $("#nameInput").val(),
+                rec = { name: nameI };
+            return b.push(rec).then(function(nameI) { 
+                $(".sucess").css("display", "block"), 
+                $(".sucess-none").css("display", "none") }
+            ), !1 
+    })   
+    </script>
 </body>
 </html>

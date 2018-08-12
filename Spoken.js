@@ -96,8 +96,7 @@ var starLayerShow = function() {
     star.classList.toggle('show');
 }
 
-
-document.getElementById('submit').onclick = function () {
+var submitName = function() {
     starLayerShow();
     fadeFormContent();
     starFade();
@@ -105,7 +104,9 @@ document.getElementById('submit').onclick = function () {
     setTimeout(starRise, 1550);
     setTimeout(seeyouShow, 3000);
     setTimeout(seeyouFade, 3050);
+    return false;
 }
+
 
 document.getElementById('reset').onclick = function () {
     starFade();
