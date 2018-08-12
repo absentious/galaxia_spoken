@@ -116,6 +116,7 @@ a:visited {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    transition: background-color .5s;
 }
 
 .leave_e {
@@ -152,7 +153,7 @@ a:visited {
 
 #leave {
     opacity: 0;
-    transition: opacity 1.5s; 
+    transition: opacity 1.5s, background-color 0.5s; 
 }
   
 #leave.fade {
@@ -233,6 +234,7 @@ input {
     margin-left: auto;
     margin-right: auto;
     padding-left: 2.5rem;
+    transition: background-color .5s;
 }
 
 .zero_t {
@@ -307,6 +309,7 @@ input {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    transition: background-color .5s;
 }
 
 .reset:hover {
@@ -354,6 +357,12 @@ pre {
     .body, html {
         font-size: 14px;
         margin: 16px;
+    }
+
+    .topnav {
+        margin-top: 0px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .g_t {
@@ -426,7 +435,45 @@ pre {
 }
 
 @media screen and (max-width: 375px) {
+    .allcontent {
+        margin-top: 20px;
+    }
+
+    .leave {
+        margin-top: 30px;
+    }
+
     .submit {
         padding-left: 28%;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .allcontent {
+        margin-top: 8px;
+    }
+
+    .leave {
+        margin-top: 30px;
+    }
+
+    .navitem_t {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .quote {
+        margin-top: 30px;
+    }
+
+    .submit {
+        padding-left: 28%;
+    }
+
+    .g_t {
+        letter-spacing: 2.5px;
+        line-height: 5px;
+        font-size: 4.2px;
+        text-align: center;
     }
 }
