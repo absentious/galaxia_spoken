@@ -12,9 +12,9 @@
 <body>
     <div class="layers">
         <div class="topnav">
-                <div><p class="navitem_t">Home</p></div>
+            <div><p class="navitem_t"><a href="./index.html">Home</a></p></div>
             <div class="subnav">
-                    <div><p class="navitem_t"><a href="./about.html">About</a></p></div>
+                    <div><p class="navitem_t">About</p></div>
                 <div class="navitem"><p class="navitem_t"><a href="mailto:admin@galaxiaspoken.org">Contact</a></p></div>
             </div>
         </div>
@@ -26,15 +26,13 @@
             </div>
             <div class="quote" id="quote">
                 <p class="quote_t">
-                    "Do you not know that a [human] is not dead
-                    while [their] name is still <b>spoken</b>?"
-                </p>
-                <p class="author_t">
-                    - Terry Pratchett
+                    Spoken is a lighting pattern that uses morse code to pulse out significant names on the Galaxia temple. 
+                    <br /><br />
+                    Visitors with names they wish to be spoken can submit names online in advance of Burning Man, or on-playa using a terminal near the Temple. <br /><br />
+                    When one sees a light sparkling like a star amongst a galaxy, they know that someone is having their name spoken.
                 </p>
             </div>
-            <div class="leave" id="leave">
-                <p class="leave_t">Leave a Name ></p>
+            <div id="leave">
             </div>
 
             <div class="form" id="form">
@@ -72,32 +70,6 @@
         </div>
     </div>
     <script src="./Spoken.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyDzat7rQrc5Lgs9CaUjlXVRU6VHE5GKdpQ",
-        authDomain: "galaxia-90874.firebaseapp.com",
-        databaseURL: "https://galaxia-90874.firebaseio.com",
-        projectId: "galaxia-90874",
-        storageBucket: "galaxia-90874.appspot.com",
-        messagingSenderId: "703900118466"
-    };
-    firebase.initializeApp(config);
-    const storageService = firebase.storage();
-    const storageRef = storageService.ref();
-    var b = firebase.database().ref("names");
-    $("#formName").submit(
-        function(config) { 
-            $(this), console.log("Submit to Firebase");
-            var nameI = $("#nameInput").val(),
-                rec = { name: nameI };
-            return b.push(rec).then(function(nameI) { 
-                $(".sucess").css("display", "block"), 
-                $(".sucess-none").css("display", "none") }
-            ), !1 
-    })   
-    </script>
+    
 </body>
 </html>

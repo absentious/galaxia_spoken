@@ -5,15 +5,57 @@
     font-size: 14px;
 }
 
+a {
+    color: #f6f6f6;
+    text-decoration: none;
+    opacity: .33;
+    transition: opacity 1.5s;
+    font-weight: bold;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
 .layers {
     position: relative;
 }
 
 .allcontent {
     position: absolute;
-    margin-top: 60px;
+    margin-top: 40px;
     width: 100%;
 }
+
+.topnav {
+    margin-top: 14px;
+    width: 70rem;
+    max-width: 70rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.navitem {
+    padding-left: 3rem;
+}
+
+.navitem_t {
+    font-weight: bold;
+}
+
 
 .galaxia {
     display: flex; 
