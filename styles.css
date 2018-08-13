@@ -9,7 +9,7 @@ a {
     color: #f6f6f6;
     text-decoration: none;
     opacity: .33;
-    transition: opacity 1.5s;
+    transition: opacity 1s;
     font-weight: bold;
 }
 
@@ -67,7 +67,7 @@ a:visited {
 
 #galaxia {
     opacity: 0;
-    transition: opacity 3s; 
+    transition: opacity 2s; 
 }
   
 #galaxia.fade {
@@ -92,7 +92,7 @@ a:visited {
 
 #quote {
     opacity: 0;
-    transition: opacity 1.5s; 
+    transition: opacity 1s; 
 }
 
 #quote.fade {
@@ -116,7 +116,7 @@ a:visited {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    transition: background-color .5s;
+    transition: background-color .3s;
 }
 
 .leave_e {
@@ -153,7 +153,7 @@ a:visited {
 
 #leave {
     opacity: 0;
-    transition: opacity 1.5s, background-color 0.5s; 
+    transition: opacity 1s, background-color 0.3s; 
 }
   
 #leave.fade {
@@ -175,7 +175,7 @@ a:visited {
 
 #form {
     opacity: 0;
-    transition: opacity 1.5s; 
+    transition: opacity 1s; 
 }
 
 #form.fade {
@@ -194,7 +194,7 @@ a:visited {
 
 #formContent {
     opacity: 1;
-    transition: opacity 1.5s; 
+    transition: opacity 1s; 
 }
 
 #formContent.fade {
@@ -234,7 +234,7 @@ input {
     margin-left: auto;
     margin-right: auto;
     padding-left: 2.5rem;
-    transition: background-color .5s;
+    transition: background-color .3s;
 }
 
 .zero_t {
@@ -258,7 +258,7 @@ input {
     padding-top: 680px;
     opacity: 0;
     transition: padding-top 2s, 
-        opacity 1.5s; 
+        opacity 1s; 
 }
 
 #starAnimate.rise {
@@ -279,7 +279,7 @@ input {
 
 #seeyou {
     opacity: 0;
-    transition: opacity 1.5s;
+    transition: opacity 1s;
 }
 
 #seeyou.fade {
@@ -309,7 +309,7 @@ input {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    transition: background-color .5s;
+    transition: background-color .3s;
 }
 
 .reset:hover {
@@ -350,6 +350,104 @@ pre {
 
 .subbut{
     text-align: center;
+}
+
+@media screen and (max-width: 1440px) { 
+    .topnav {
+        width: 50rem;
+        max-width: 50rem;
+    }
+
+    .allcontent {
+        margin-top: 30px;
+    }
+
+    .g_t {
+        letter-spacing:3.5px;
+        line-height:7px;
+        font-size:6.2px;
+        font-weight:bold;
+        background:#000000;
+    }
+
+    .quote {
+        margin-top: 45px;
+    }
+
+    .form {
+        margin-top: 45px;
+    }
+
+    .leave {
+        margin-top: 45px;
+    }
+
+    .submit {
+        margin-top: 45px;
+    }
+
+    .quote_t {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #starAnimate {
+        padding-top: 520px;
+    }
+    
+    #starAnimate.rise {
+        padding-top: 260px;
+    }
+    
+}
+
+@media screen and (max-width: 1080px) { 
+    .topnav {
+        width: 50rem;
+        max-width: 50rem;
+    }
+
+    .allcontent {
+        margin-top: 30px;
+    }
+
+    .g_t {
+        letter-spacing:3.5px;
+        line-height:7px;
+        font-size:6.2px;
+        font-weight:bold;
+        background:#000000;
+    }
+
+    .quote {
+        margin-top: 40px;
+    }
+
+    .form {
+        margin-top: 40px;
+    }
+
+    .leave {
+        margin-top: 40px;
+    }
+
+    .submit {
+        margin-top: 40px;
+    }
+
+    .quote_t {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    #starAnimate {
+        padding-top: 420px;
+    }
+    
+    #starAnimate.rise {
+        padding-top: 200px;
+    }
+    
 }
 
 @media screen and (max-width: 480px) {
